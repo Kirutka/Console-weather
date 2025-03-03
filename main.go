@@ -24,7 +24,7 @@ type WeatherResponse struct {
 }
 
 func main() {
-	apiKey := "27f05a07d9424065e5e79058cc75e825" // API-ключ
+	apiKey := "ВАШ API-ключ" // API-ключ
 
 	var city string
 	fmt.Print("Введите город: ")
@@ -51,8 +51,6 @@ func main() {
 		fmt.Println("Ошибка при чтении ответа:", err)
 		return
 	}
-
-	// fmt.Println("Ответ от API:", string(body))
 
 	var weather WeatherResponse // Разбор JSON-ответа
 	err = json.Unmarshal(body, &weather)
